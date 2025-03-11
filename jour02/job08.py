@@ -33,10 +33,16 @@ class Zoo:
         self.cursor.execute(query, values)
         self.cnx.commit()
 
-    def lister_animaux(self):
+    def lister_animaux(self, id_cage=None):
+       if id_cage:
+        query = "SELECT * FROM animal WHERE id_cage = %s"
+        self.cursor.execute(query, (id_cage,))
+       else:
         query = "SELECT * FROM animal"
         self.cursor.execute(query)
-        return self.cursor.fetchall()
+        
+       animaux = self.cursor.fetchall()
+       return animaux if animaux else []
 
     def supprimer_animal(self, id_animal):
         query = "DELETE FROM animal WHERE id = %s"
@@ -83,12 +89,15 @@ class Zoo:
 
      
     def fermer_connexion(self):
-        if hasattr(self, 'cursor') and self.cursor:
-          self.cursor.close()
-          self.cursor = None  # Évite de réutiliser une référence supprimée
-        if hasattr(self, 'cnx') and self.cnx:
-          self.cnx.close()
-          self.cnx = None  # Même chose ici
+      try:
+          if hasattr(self, 'cursor') and self.cursor:
+             self.cursor.close()
+             self.cursor = None  # Évite de réutiliser une référence supprimée
+          if hasattr(self, 'cnx') and self.cnx:
+             self.cnx.close()
+             self.cnx = None  # Même chose ici
+      except Exception as e:
+           print(f"erreur ors de la fermeture de la connexion : {e}")
    
 
 def menu(zoo):
