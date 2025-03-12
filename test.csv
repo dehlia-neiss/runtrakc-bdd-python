@@ -1,0 +1,17 @@
+ID,Nom,Description,Prix,Quantité,Catégorie
+1,Smartphone X,"Écran OLED, 128Go, Caméra 48MP",799,50,Électronique
+2,Casque Bluetooth,"Réduction de bruit active, autonomie 30h",199,30,Électronique
+3,Montre connectée,"Suivi du sommeil, GPS, étanche",149,40,Électronique
+4,T-shirt coton,"100% coton bio, disponible en plusieurs couleurs",25,100,Mode
+5,Jean slim,"Coupe ajustée, denim stretch",49,80,Mode
+6,Sneakers running,"Confort maximal, semelle antichoc",89,60,Mode
+7,Chocolat noir bio,"70% cacao, issu du commerce équitable",5,200,Alimentation
+8,Café arabica,"Torréfaction artisanale, pack de 500g",12,150,Alimentation
+9,Pack de pâtes,"Pâtes italiennes, cuisson rapide",3,300,Alimentation
+10,Aspirateur robot,"Programmable, détection d'obstacles",299,20,Maison
+11,Lampe LED design,"Éclairage doux, intensité réglable",45,70,Maison
+12,Fauteuil confort,"Tissu premium, repose-tête intégré",199,25,Maison
+13,Vélo tout terrain,"Cadre en aluminium, 21 vitesses",499,15,Sport
+14,Haltères ajustables,Poids modulables de 2 à 20kg,99,35,Sport
+15,Tapis de yoga,"Antidérapant, épaisseur 6mm",29,50,Sport
+17,bonnet,100% laine,12,120,Mode
