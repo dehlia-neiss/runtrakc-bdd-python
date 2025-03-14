@@ -14,7 +14,6 @@ def show_pie_chart():
 
     labels, sizes = zip(*data)
 
-    # Utilisation de plt.pie sans spécifier figsize
     plt.pie(sizes, labels=labels, autopct="%1.1f%%", startangle=140)
     plt.title("Répartition des produits par catégorie")
     plt.show()
@@ -218,11 +217,9 @@ btn_add.grid(row=5, column=0, columnspan=2)
 btn_update = tk.Button(frame_form, text="Modifier", command=update_product, state="disabled")
 btn_update.grid(row=6, column=0, columnspan=2)
 
-# Ajouter un bouton pour afficher le graphique
 btn_chart = tk.Button(root, text="Afficher graphique", command=show_pie_chart)
 btn_chart.pack(pady=10)
 
-# Ajouter un bouton pour exporter en CSV
 btn_export = tk.Button(root, text="Exporter en CSV", command=export_to_csv)
 btn_export.pack(pady=10)
 
